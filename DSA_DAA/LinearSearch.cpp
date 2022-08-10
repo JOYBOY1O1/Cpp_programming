@@ -9,12 +9,21 @@ int LinearSearch(int A[], int size, int key)
     }
     return -1;
 }
-
 int main()
 {
-    int A[] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
-    int size = sizeof(A) / sizeof(A[0]);
-    int key = 9;
+    int size,key;
+    cout<<"Enter array size: ";
+    cin>>size;
+    int A[size];
+    
+    for(int i=0;i<size;i++){
+        cout<<"Enter Element "<<i+1<<" : ";
+        cin>>A[i];
+    }
+    cout<<"Enter key to search: ";
+    cin>>key;
+    
+
     int result = LinearSearch(A, size, key);
     cout << "Index of "<<key<<" is "<<result;
 }
